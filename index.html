@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Talha Mahmood — B2B Lead Generation, Manually Verified</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #17223B;
+    --ink-soft: #3E4A63;
+    --paper: #F6F3EC;
+    --paper-line: #DEDACD;
+    --verify: #2F6E4E;
+    --verify-soft: #E4EEE6;
+    --flag: #B5502F;
+    --card: #FFFFFF;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #ECE7DA; --ink-soft: #B9B2A0; --paper: #14181F; --paper-line: #2A2F3A;
+      --verify: #7FCE9F; --verify-soft: #1C2C22; --flag: #E38A6A; --card: #1B2029;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ECE7DA; --ink-soft: #B9B2A0; --paper: #14181F; --paper-line: #2A2F3A;
+    --verify: #7FCE9F; --verify-soft: #1C2C22; --flag: #E38A6A; --card: #1B2029;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  * { margin: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px; line-height: 1.6;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
+
+  header {
+    position: sticky; top: 0; z-index: 20;
+    padding-top: env(safe-area-inset-top, 0px);
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--paper-line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; max-width: 980px; margin: 0 auto; }
+  .nav-name { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; }
+  .nav-links { display: flex; gap: 22px; font-size: 14px; }
+  .nav-links a { color: var(--ink-soft); text-decoration: none; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta { background: var(--ink); color: var(--paper); padding: 8px 16px; border-radius: 3px; font-size: 13px; text-decoration: none; white-space: nowrap; }
+
+  section { padding: 72px 0; border-bottom: 1px solid var(--paper-line); }
+  section:last-of-type { border-bottom: none; }
+
+  .hero { padding-top: 56px; padding-bottom: 64px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--verify); background: var(--verify-soft); padding: 6px 12px; border-radius: 3px; margin-bottom: 22px; }
+  .hero-tag::before { content: "✓"; font-weight: 700; }
+  h1 { font-size: clamp(34px, 5.4vw, 54px); line-height: 1.08; max-width: 13ch; }
+  .hero-sub { color: var(--ink-soft); font-size: 18px; max-width: 46ch; margin-top: 20px; }
+  .hero-row { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
+  .btn-primary { background: var(--ink); color: var(--paper); padding: 13px 24px; border-radius: 3px; text-decoration: none; font-size: 15px; font-weight: 500; }
+  .btn-ghost { border: 1px solid var(--paper-line); color: var(--ink); padding: 13px 24px; border-radius: 3px; text-decoration: none; font-size: 15px; }
+
+  .stat-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--paper-line); margin-top: 56px; border: 1px solid var(--paper-line); }
+  .stat { background: var(--paper); padding: 20px; }
+  .stat .num { font-family: 'IBM Plex Mono', monospace; font-size: 30px; font-weight: 500; color: var(--verify); }
+  .stat .label { font-size: 13px; color: var(--ink-soft); margin-top: 4px; }
+
+  .eyebrow { font-size: 13px; color: var(--ink-soft); margin-bottom: 14px; }
+  h2 { font-size: clamp(24px, 3.4vw, 32px); max-width: 22ch; }
+
+  .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: start; margin-top: 30px; }
+  .about-grid p { color: var(--ink-soft); margin-bottom: 14px; max-width: 52ch; }
+  .about-grid p:last-child { margin-bottom: 0; }
+  .ledger { border: 1px solid var(--paper-line); background: var(--card); }
+  .ledger-row { display: flex; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid var(--paper-line); font-size: 14px; }
+  .ledger-row:last-child { border-bottom: none; }
+  .ledger-row span:first-child { color: var(--ink-soft); }
+  .ledger-row span:last-child { font-family: 'IBM Plex Mono', monospace; }
+
+  .services { margin-top: 34px; }
+  .svc-row { display: grid; grid-template-columns: 46px 1fr; gap: 20px; padding: 24px 0; border-top: 1px solid var(--paper-line); }
+  .svc-row:last-child { border-bottom: 1px solid var(--paper-line); }
+  .svc-mark { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--verify); padding-top: 3px; }
+  .svc-row h3 { font-size: 19px; margin-bottom: 6px; }
+  .svc-row p { color: var(--ink-soft); font-size: 15px; max-width: 56ch; }
+
+  .cases { margin-top: 34px; display: flex; flex-direction: column; gap: 16px; }
+  .case { background: var(--card); border: 1px solid var(--paper-line); padding: 26px 28px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+  .case-client { font-size: 13px; color: var(--ink-soft); margin-bottom: 6px; }
+  .case-line { font-size: 16px; max-width: 46ch; }
+  .case-before { color: var(--flag); }
+  .case-after { color: var(--verify); font-weight: 500; }
+  .case-metrics { display: flex; gap: 22px; text-align: right; }
+  .case-metrics .m-num { font-family: 'IBM Plex Mono', monospace; font-size: 22px; }
+  .case-metrics .m-num.before { color: var(--flag); }
+  .case-metrics .m-num.after { color: var(--verify); }
+  .case-metrics .m-label { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+
+  .contact-inner { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .contact-copy p { color: var(--ink-soft); max-width: 42ch; }
+  .field-list { display: flex; flex-direction: column; gap: 14px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 13px; color: var(--ink-soft); }
+  .field input, .field textarea {
+    background: var(--card); border: 1px solid var(--paper-line); color: var(--ink);
+    padding: 11px 13px; font-family: inherit; font-size: 15px; border-radius: 3px; resize: vertical;
+  }
+  .field textarea { min-height: 90px; }
+  .submit-btn { background: var(--ink); color: var(--paper); padding: 13px 22px; border: none; border-radius: 3px; font-size: 15px; cursor: pointer; align-self: flex-start; font-family: inherit; }
+  .status-msg { font-size: 13px; color: var(--verify); min-height: 18px; }
+
+  footer { padding: 32px 0; }
+  .footer-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--ink-soft); }
+  .footer-links { display: flex; gap: 18px; }
+  .footer-links a { color: var(--ink-soft); text-decoration: none; }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+    .about-grid, .contact-inner { grid-template-columns: 1fr; }
+    .stat-strip { grid-template-columns: 1fr; }
+    .case { grid-template-columns: 1fr; }
+    .case-metrics { justify-content: flex-start; text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="nav-name">Talha Mahmood</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Get a sample list</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="hero-tag">100% manually verified, no bots</span>
+    <h1>Verified B2B contacts, built by hand for your exact niche.</h1>
+    <p class="hero-sub">I research, verify and deliver decision-maker lead lists — Founders, CEOs, Heads of Department — so your outreach lands in the right inbox, every time.</p>
+    <div class="hero-row">
+      <a class="btn-primary" href="#contact">Request a free sample list</a>
+      <a class="btn-ghost" href="#results">See client results</a>
+    </div>
+    <div class="stat-strip">
+      <div class="stat"><div class="num">0%</div><div class="label">Average bounce rate</div></div>
+      <div class="stat"><div class="num">100%</div><div class="label">Manually verified contacts</div></div>
+      <div class="stat"><div class="num">5–7</div><div class="label">Business days to delivery</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <h2>Why manual, when everyone else automates.</h2>
+    <div class="about-grid">
+      <div>
+        <p>Most lead lists are built by bots pulling from stale databases — that's how a $800 list ends up with a 43% bounce rate and a flagged domain. I do the opposite: every contact is found, checked and verified by hand before it reaches your list.</p>
+        <p>I work with digital marketing agencies and B2B businesses who are tired of chasing the wrong people. My job is to make sure your outreach reaches someone who can actually say yes.</p>
+      </div>
+      <div class="ledger">
+        <div class="ledger-row"><span>Based in</span><span>Gojra, Punjab, Pakistan</span></div>
+        <div class="ledger-row"><span>Focus</span><span>B2B Lead Generation</span></div>
+        <div class="ledger-row"><span>Method</span><span>Manual research only</span></div>
+        <div class="ledger-row"><span>Targets</span><span>Founders · CEOs · Owners</span></div>
+        <div class="ledger-row"><span>Delivery</span><span>CRM-ready, verified</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h2>What I build for you.</h2>
+    <div class="services">
+      <div class="svc-row">
+        <div class="svc-mark">01</div>
+        <div><h3>B2B Lead Generation</h3><p>Targeted, niche-specific lists built around your ideal customer profile, not a generic database dump.</p></div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-mark">02</div>
+        <div><h3>Manual Data Extraction</h3><p>Every contact researched by hand — no scrapers, no recycled data, no wrong titles.</p></div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-mark">03</div>
+        <div><h3>Target Contact List Building</h3><p>Decision-maker lists — Founders, CEOs, Heads of Department — verified and ready for outreach.</p></div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-mark">04</div>
+        <div><h3>Web & LinkedIn Research</h3><p>Company-level and profile-level research to confirm fit before a contact ever makes your list.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <div class="eyebrow">Results</div>
+    <h2>Real clients, real numbers.</h2>
+    <div class="cases">
+      <div class="case">
+        <div>
+          <div class="case-client">Digital marketing agency</div>
+          <div class="case-line"><span class="case-before">43% bounce, 0 replies</span> in 3 weeks on a bought list — <span class="case-after">0% bounce, 3 deals</span> in week one after a manual rebuild.</div>
+        </div>
+        <div class="case-metrics">
+          <div><div class="m-num before">43%</div><div class="m-label">before</div></div>
+          <div><div class="m-num after">0%</div><div class="m-label">after</div></div>
+        </div>
+      </div>
+      <div class="case">
+        <div>
+          <div class="case-client">B2B software company</div>
+          <div class="case-line"><span class="case-before">$800 spent, 0 meetings</span> in 6 weeks — <span class="case-after">4 replies in 48 hours</span>, 1 deal signed within 30 days.</div>
+        </div>
+        <div class="case-metrics">
+          <div><div class="m-num before">0</div><div class="m-label">before</div></div>
+          <div><div class="m-num after">4</div><div class="m-label">after</div></div>
+        </div>
+      </div>
+      <div class="case">
+        <div>
+          <div class="case-client">Recruitment agency</div>
+          <div class="case-line"><span class="case-before">67% wrong contacts, 2% replies</span> from a scraper — <span class="case-after">100% verified, 68% open rate</span> after switching to manual.</div>
+        </div>
+        <div class="case-metrics">
+          <div><div class="m-num before">2%</div><div class="m-label">before</div></div>
+          <div><div class="m-num after">68%</div><div class="m-label">after</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Tell me who you're trying to reach.</h2>
+    <div class="contact-inner">
+      <div class="contact-copy">
+        <p>Send a short brief — industry, company size, job title you're targeting — and I'll tell you exactly what a manually verified list looks like for your niche.</p>
+        <p style="margin-top:18px;">Prefer LinkedIn? Message me directly and I'll reply personally.</p>
+      </div>
+      <form class="field-list" id="contactForm">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required></div>
+        <div class="field"><label for="company">Company</label><input id="company" name="company"></div>
+        <div class="field"><label for="message">What are you trying to reach?</label><textarea id="message" name="message" placeholder="e.g. Founders at 10–50 person marketing agencies in the US"></textarea></div>
+        <button class="submit-btn" type="submit">Send brief</button>
+        <div class="status-msg" id="statusMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <span>© 2026 Talha Mahmood · B2B Lead Generation Expert</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/talha-mahmood-941742408/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('statusMsg').textContent = "This form is a placeholder — connect a real submit action (e.g. email service or a form backend) before going live.";
+  });
+</script>
+
+</body>
+</html>
